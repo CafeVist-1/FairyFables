@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import video from '../assets/images/videob.mp4';
 import "../assets/styles/HeroSection.css";
+import AppDownload from './AppDownload';
 
 export default function HeroSection() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -10,8 +11,14 @@ export default function HeroSection() {
         setMenuOpen(!menuOpen);
     };
 
-    const handleMenuItemClick = () => {
+    const handleMenuItemClick = (event) => {
+        event.preventDefault();
         setMenuOpen(false);
+        const sectionId = event.currentTarget.getAttribute('href');
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     const handleButtonClick = () => {
@@ -27,11 +34,11 @@ export default function HeroSection() {
             <nav className="navbar">
                 <div className="logo"></div>
                 <ul className={menuOpen ? "open" : ""}>
-                    <li onClick={handleMenuItemClick}> <a href="#HeroSection">Home</a></li>
-                    <li onClick={handleMenuItemClick}> <a href="#AppDownload">Download</a></li>
-                    <li onClick={handleMenuItemClick}> <a href="#HowItWorks">Working</a></li>
-                    <li onClick={handleMenuItemClick}> <a href="#Features">Features</a></li>
-                    <li onClick={handleMenuItemClick}> <a href="#Pricing">Pricing</a></li>
+                    <li><a href="#HeroSection" onClick={handleMenuItemClick}>Home</a></li>
+                    <li><a href="#AppDownload" onClick={handleMenuItemClick}>Download</a></li>
+                    <li><a href="#HowItWorks" onClick={handleMenuItemClick}>Working</a></li>
+                    <li><a href="#Features" onClick={handleMenuItemClick}>Features</a></li>
+                    <li><a href="#Pricing" onClick={handleMenuItemClick}>Pricing</a></li>
                 </ul>
                 <span className="material-symbols-outlined menu-icon" onClick={toggleMenu}>
                     menu
@@ -60,7 +67,7 @@ export default function HeroSection() {
                     </div>
                 </div>
             )}
-
+            {/* <AppDownload menuOpen={menuOpen} /> */}
         </div>
     );
 }

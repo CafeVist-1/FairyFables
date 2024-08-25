@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "../assets/styles/AppDownload.css";
-import "../assets/styles/HeroSection.css";
 import aicon from '../assets/images/aicon.png';
 import iosicon from '../assets/images/iosicon.png';
 import appa from '../assets/images/appa.png';
@@ -8,7 +7,7 @@ import appb from '../assets/images/appb.png';
 import appc from '../assets/images/appc.png';
 import appd from '../assets/images/appd.png';
 
-export default function AppDownload() {
+export default function AppDownload({ menuOpen }) {
     const [popupOpen, setPopupOpen] = useState(false);
 
     const handleDownloadClick = () => {
@@ -53,10 +52,10 @@ export default function AppDownload() {
             </div>
             <div className="app-right">
                 <div className="slideshow">
-                    <button className="slide-btn slide-btn-1"></button>
-                    <button className="slide-btn slide-btn-2"></button>
-                    <button className="slide-btn slide-btn-3"></button>
-                    <button className="slide-btn slide-btn-4"></button>
+                    <button className={`slide-btn slide-btn-1 ${menuOpen ? 'nav-open' : ''}`}></button>
+                    <button className={`slide-btn slide-btn-2 ${menuOpen ? 'nav-open' : ''}`}></button>
+                    <button className={`slide-btn slide-btn-3 ${menuOpen ? 'nav-open' : ''}`}></button>
+                    <button className={`slide-btn slide-btn-4 ${menuOpen ? 'nav-open' : ''}`}></button>
                     <div className="slideshow-wrapper">
                         <div className="slide">
                             <img className="slide-img" src={appa} alt="App Screen 1" />
@@ -85,5 +84,3 @@ export default function AppDownload() {
         </div>
     );
 }
-
-

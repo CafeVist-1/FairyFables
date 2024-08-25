@@ -7,7 +7,6 @@
     background-image: url("../images/howItWork.jpg");
     background-position: center;
     background-size: cover;
-    /* height: auto; */
 }
 
 .HowItWorks .container {
@@ -78,7 +77,6 @@
 .HowItWorks .step-content p {
     font-size: 1em;
     color: #dcdcdc;
-    /* margin: 10px 0; */
     height: 8vh;
 }
 

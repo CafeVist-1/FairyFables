@@ -245,11 +245,8 @@ html {
         margin-bottom: 6vh;
     }
 
-    .main a {
+    .main button {
         font-size: 1.25vw;
-    }
-
-    .main a>button {
         padding: 2.70vh 2.70vw;
     }
 }
@@ -268,12 +265,8 @@ html {
         margin-bottom: 5.5vh;
     }
 
-    .main a {
-        font-size: 1.45vw;
-    }
-
-    .main a>button {
-        font-size: 3vw;
+    .main button {
+        font-size: 2.5vw;
     }
 
     .navbar {
@@ -335,11 +328,8 @@ html {
         margin-bottom: 6vh;
     }
 
-    .main a {
-        font-size: 2.5vw;
-    }
-
-    .main a>button {
+    .main button {
+        font-size: 3vw;
         padding: 2.60vh 2.60vw;
     }
 }
@@ -358,11 +348,8 @@ html {
         margin-bottom: 6vh;
     }
 
-    .main a {
+    .main button {
         font-size: 4vw;
-    }
-
-    .main a>button {
         padding: 2.5vh 2.5vw;
     }
 }
