@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import video from '../assets/images/videob.mp4';
+import comingsoon from '../assets/images/comingsoonb.png';
 import "../assets/styles/HeroSection.css";
 import AppDownload from './AppDownload';
 
@@ -63,7 +64,9 @@ export default function HeroSection() {
                 <div className="popup">
                     <div className="popup-content">
                         <span className="close" onClick={closePopup}>&times;</span>
+                        <img src={comingsoon} alt="Coming Soon Icon" />
                         <p>COMING SOON!</p>
+                        <p>We are launching the site very soon, come back later!</p>
                     </div>
                 </div>
             )}

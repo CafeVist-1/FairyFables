@@ -194,42 +194,81 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .popup-content {
-    background: white;
-    padding: 80px 0px;
+    background: #1e1e2f;
+    padding: 20px;
     position: relative;
-    width: 320px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    animation: scaleUp 0.4s ease-in-out;
 }
 
-.popup-content p {
-    font-size: 32px;
-    margin: 0 auto;
-    color: black;
-    font-weight: 800;
-    width: 50%;
+.popup-content img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.popup-content p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.popup-content p:last-of-type {
+    font-size: 14px;
+    color: #c7c7c7;
 }
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     font-size: 25px;
     cursor: pointer;
-    color: #aaa;
+    color: #ffffff;
+    transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #000;
+    color: red;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 
 @media (max-width: 1200px) {
     .main h1 {

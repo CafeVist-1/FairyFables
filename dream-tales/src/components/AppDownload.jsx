@@ -6,6 +6,7 @@ import appa from '../assets/images/appa.png';
 import appb from '../assets/images/appb.png';
 import appc from '../assets/images/appc.png';
 import appd from '../assets/images/appd.png';
+import comingsoon from '../assets/images/comingsoonb.png';
 
 export default function AppDownload({ menuOpen }) {
     const [popupOpen, setPopupOpen] = useState(false);
@@ -77,7 +78,9 @@ export default function AppDownload({ menuOpen }) {
                 <div className="popup">
                     <div className="popup-content">
                         <span className="close" onClick={closePopup}>&times;</span>
+                        <img src={comingsoon} alt="Coming Soon Icon" />
                         <p>COMING SOON!</p>
+                        <p>We are launching the site very soon, come back later!</p>
                     </div>
                 </div>
             )}
