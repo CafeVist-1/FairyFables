@@ -1,9 +1,9 @@
-import HeroSection from './HeroSection.jsx'
-import AppDownload from './AppDownload.jsx'
-import HowItWorks from './HowItWorks.jsx'
-import Features from './Features.jsx'
-import Pricing from './Pricing.jsx'
-import Footer from './Footer.jsx'
+import HeroSection from './components/HeroSection.jsx'
+import AppDownload from './components/AppDownload.jsx'
+import HowItWorks from './components/HowItWorks.jsx'
+import Features from './components/Features.jsx'
+import Pricing from './components/Pricing.jsx'
+import Footer from './components/Footer.jsx'
 import './App.css'
 
 
@@ -15,8 +15,8 @@ function App() {
       <AppDownload />
       <HowItWorks />
       <Features />
-      <Pricing/>
-      <Footer/>
+      <Pricing />
+      <Footer />
     </>
   )
 }
