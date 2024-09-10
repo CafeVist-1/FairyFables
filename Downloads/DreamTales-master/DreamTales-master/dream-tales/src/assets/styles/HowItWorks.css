@@ -1,0 +1,110 @@
+.HowItWorks {
+    background-color: #0d0d0d;
+    color: #e8e8e8;
+    padding: 30px 20px 45px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    background-image: url("../images/howItWork.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.HowItWorks .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.HowItWorks .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.HowItWorks .section-title h2 {
+    font-size: 2.5em;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+}
+
+.HowItWorks .section-title p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+.HowItWorks .steps-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.HowItWorks .step {
+    width: 30%;
+    height: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(69, 26, 62, 0.6), rgba(0, 0, 0, 0.4));
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+.HowItWorks .step.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.HowItWorks .step-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #f7b1cb;
+    margin-bottom: 10px;
+}
+
+.HowItWorks .step-content h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 0px;
+    height: 8vh;
+}
+
+.HowItWorks .step-content p {
+    font-size: 1em;
+    color: #dcdcdc;
+    height: 8vh;
+}
+
+
+@media (max-width: 768px) {
+    .HowItWorks {
+        height: auto;
+    }
+
+    .HowItWorks .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .HowItWorks .step {
+        margin: 10px 0;
+    }
+
+    .HowItWorks .step-content h3 {
+        height: 10vh;
+    }
+
+    .HowItWorks .step {
+        width: 80%;
+        height: 30%;
+        margin: 15px;
+    }
+
+    .HowItWorks .step-content p {
+        height: 12vh;
+    }
+}
