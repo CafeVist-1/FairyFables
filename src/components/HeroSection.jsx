@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import video from '../assets/images/videob.mp4';
+import download from '../assets/images/download.png';
 import "../assets/styles/HeroSection.css";
 import Popup from './Popup.jsx';
 
@@ -56,7 +57,7 @@ export default function HeroSection() {
                 <p>
                     Help your child unwind with personalized bedtime stories, crafted by AI to inspire sweet dreams.
                 </p>
-                <button onClick={handleButtonClick}>Download DreamTales</button>
+                <button onClick={handleButtonClick}><img src={download} alt="download png" />Download DreamTales</button>
             </div>
 
             <Popup

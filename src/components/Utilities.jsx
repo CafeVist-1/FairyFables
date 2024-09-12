@@ -93,7 +93,7 @@ export const staticElements = {
 export const pricingTiers = [
     {
         title: 'Free Tier',
-        description: 'Three free stories per month with basic features.',
+        description: 'Three free stories per month with basic features and standard customization options.',
         price: 'Free',
         buttonText: 'Choose Free',
         className: ''
@@ -107,7 +107,7 @@ export const pricingTiers = [
     },
     {
         title: 'Premium Yearly',
-        description: 'All Premium features at a discounted yearly rate.',
+        description: 'All Premium features, including advanced options, at a discounted yearly subscription rate',
         price: '$99.99 / year',
         buttonText: 'Upgrade to Premium',
         className: 'premium-yearly'
