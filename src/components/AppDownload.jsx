@@ -17,7 +17,7 @@ export default function AppDownload({ menuOpen }) {
     return (
         <div className="app-download" id="AppDownload">
             <div className="app-left">
-                <h2>Download DreamTales</h2>
+                <h2>Download FairyFables</h2>
                 <div className="download-buttons">
                     {downloadIcons.map((icon, index) => (
                         <div key={index} onClick={handleDownloadClick}>

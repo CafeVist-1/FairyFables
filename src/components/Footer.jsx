@@ -16,7 +16,7 @@ export default function Footer() {
                 ))}
             </section>
             <footer>
-                <p>&copy; 2024 DreamTales, Inc. · Terms · Sitemap · Privacy · Your Privacy Choices</p>
+                <p>&copy; 2024 FairyFables, Inc. · Terms · Sitemap · Privacy · Your Privacy Choices</p>
             </footer>
         </div>
     );

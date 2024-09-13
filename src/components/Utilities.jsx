@@ -157,7 +157,7 @@ export const footerSections = [
         ]
     },
     {
-        title: 'About DreamTales',
+        title: 'About FairyFables',
         items: [
             'Our Story',
             'Meet the Team',

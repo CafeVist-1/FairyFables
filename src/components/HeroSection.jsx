@@ -57,7 +57,7 @@ export default function HeroSection() {
                 <p>
                     Help your child unwind with personalized bedtime stories, crafted by AI to inspire sweet dreams.
                 </p>
-                <button onClick={handleButtonClick}><img src={download} alt="download png" />Download DreamTales</button>
+                <button onClick={handleButtonClick}><img src={download} alt="download png" />Download FairyFables</button>
             </div>
 
             <Popup
