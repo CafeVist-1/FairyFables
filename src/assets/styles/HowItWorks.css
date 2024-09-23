@@ -81,11 +81,14 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) and (max-width: 750px){
     .HowItWorks {
         height: auto;
     }
-
+    .HowItWorks .section-title h2 {
+        font-size: 9.5vw;
+        font-weight:900;
+    }
     .HowItWorks .steps-container {
         grid-template-columns: 1fr;
     }
@@ -95,16 +98,15 @@
     }
 
     .HowItWorks .step-content h3 {
-        height: 10vh;
+        height: auto;
     }
 
     .HowItWorks .step {
         width: 80%;
-        height: 30%;
         margin: 15px;
     }
 
     .HowItWorks .step-content p {
-        height: 12vh;
+        height: auto;
     }
 }

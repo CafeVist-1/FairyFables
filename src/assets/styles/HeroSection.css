@@ -84,10 +84,14 @@ html {
 }
 
 .main .background video {
-    width: 100%;
-    top: 30%;
-    height: 100%;
-    object-fit: cover;
+    width: 120%; 
+    height: auto; 
+    min-height: 100vh; 
+    object-fit: cover; 
+    object-position: center top; 
+    position: absolute; 
+    top: 0; 
+    right: -15%; 
 }
 
 .main h1 {
@@ -161,7 +165,7 @@ html {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 720px) {
     .main h1 {
         font-size: 6vw;
         width: 85%;
@@ -200,10 +204,10 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        position: absolute;
+        position: fixed;
         top: 60px;
         left: 0;
-        width: 100%;
+        width: 50%;
         min-height: calc(100vh - 60px);
         background: linear-gradient(90deg, #2c2c2c, #451a3e);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -212,7 +216,7 @@ html {
 
     .navbar ul.open li {
         display: block;
-        padding: 10px 0 10px 45px;
+        padding: 10px 0 10px 35px;
     }
 
     .navbar ul.open li a {
@@ -246,20 +250,33 @@ html {
 
 @media (max-width: 450px) {
     .main h1 {
-        font-size: 9vw;
-        width: 85%;
-        line-height: 1.1;
-        margin-bottom: 3vh;
+        font-size: 14vw;
+        width: 90%;
+        line-height: 1.05;
+        margin-bottom: 2vh;
+        margin-top:5vw;
     }
 
     .main p {
-        font-size: 4vw;
+        font-size: 5.5vw;
         width: 85%;
         margin-bottom: 6vh;
     }
 
     .main button {
-        font-size: 3.8vw;
-        padding: 2.5vh 2.5vw;
+        font-size: 4.8vw;
+        padding: 2vh 4.5vw;
+        font-weight:650;
+    }
+    .main .background video {
+        width: 120%; 
+        height: auto; 
+        min-height: 100vh; 
+        object-fit:cover; 
+        /* object-repeat: no-repeat; */
+        object-position: center top; 
+        position: absolute; 
+        top: 20; 
+        right: -20%; 
     }
 }

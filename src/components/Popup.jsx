@@ -5,29 +5,44 @@ import "../assets/styles/Popup.css";
 export default function Popup({ popupOpen, closePopup }) {
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState('');
-    const [emailList, setEmailList] = useState([]);
-
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
 
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
-    const handleSubmit = (e) => {
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateEmail(email)) {
             setEmailError('Please enter a valid email address.');
-        } else if (emailList.includes(email)) {
-            setEmailError('This email is already subscribed.');
-        } else {
-            setEmailList([...emailList, email]);
-            setEmailError('');
-            console.log('Email submitted:', email);
-            setEmail(''); // Clear the input field
-            closePopup();
+            return;
+        }
+
+        setEmailError('');
+
+        try {
+            const response = await fetch('http://localhost:5000/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setEmail(''); 
+                closePopup('Thank you for subscribing!'); 
+            } else {
+                setEmailError(data.message || 'Subscription failed. Please try again.');
+            }
+        } catch (error) {
+            setEmailError('An error occurred. Please try again.');
         }
     };
 
@@ -36,13 +51,12 @@ export default function Popup({ popupOpen, closePopup }) {
     return (
         <div className="popup">
             <div className="popup-content">
-                <span className="close" onClick={closePopup}>&times;</span>
+                <span className="close" onClick={() => closePopup('')}>×</span>
                 <img src={comingsoon} alt="Coming Soon Icon" />
-                <p>
-                    🌙 Join the Waitlist! </p>
+                <p>🌙 Join the Waitlist!</p>
                 <p>Be the first to explore magical bedtime stories</p>
-
                 <p>Enter your email to get early access!</p>
+
                 <form onSubmit={handleSubmit} className="email-form">
                     <input
                         type="email"

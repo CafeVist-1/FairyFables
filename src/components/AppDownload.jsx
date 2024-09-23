@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { downloadIcons, featureHighlights, slideshowImages } from './Utilities'; 
+import { downloadIcons, featureHighlights, slideshowImages } from './Utilities';
 import "../assets/styles/AppDownload.css";
 import Popup from './Popup.jsx';
 
@@ -13,7 +13,7 @@ export default function AppDownload({ menuOpen }) {
     const closePopup = () => {
         setPopupOpen(false);
     };
-
+  
     return (
         <div className="app-download" id="AppDownload">
             <div className="app-left">
@@ -42,9 +42,9 @@ export default function AppDownload({ menuOpen }) {
                 <div className="slideshow">
                     {slideshowImages.map((img, index) => (
                         <button
-                            key={index}
-                            className={`slide-btn slide-btn-${index + 1} ${menuOpen ? 'nav-open' : ''}`}
-                        ></button>
+                        key={index}
+                        className={`slide-btn slide-btn-${index + 1} ${menuOpen ? 'nav-open' : ''}`}
+                    ></button>
                     ))}
                     <div className="slideshow-wrapper">
                         {slideshowImages.map((img, index) => (
@@ -53,7 +53,7 @@ export default function AppDownload({ menuOpen }) {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div>         
             </div>
 
             <Popup

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { pricingTiers, comparisonTable } from './Utilities'; 
+import { pricingTiers, comparisonTable } from './Utilities';
 import "../assets/styles/Pricing.css";
 
 export default function Pricing() {
@@ -67,15 +67,16 @@ export default function Pricing() {
                     <tbody>
                         {comparisonTable.map((row, index) => (
                             <tr key={index}>
-                                <td>{row.feature}</td>
-                                <td>{row.freeTier}</td>
-                                <td>{row.premiumMonthly}</td>
-                                <td>{row.premiumYearly}</td>
+                                <td data-label="Feature">{row.feature}</td>
+                                <td data-label="Free Tier">{row.freeTier}</td>
+                                <td data-label="Premium Monthly">{row.premiumMonthly}</td>
+                                <td data-label="Premium Yearly">{row.premiumYearly}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
+
         </div>
     );
 }

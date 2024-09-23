@@ -39,13 +39,6 @@ export default function Features() {
     return (
         <div className="features" id="Features">
             <div className="containerBox">
-                {staticElements.stars.map((star, index) => (
-                    <div key={index} className={`star star-${star}`}></div>
-                ))}
-                {staticElements.moon && <div className="moon"></div>}
-                {staticElements.shootingStar && <div className="shooting-star"></div>}
-                {staticElements.mountains && <div className="mountains"></div>}
-                {staticElements.land && (
                     <div className="land">
                         {staticElements.land.windmill && (
                             <div className="windmill">
@@ -55,7 +48,7 @@ export default function Features() {
                         )}
                         {staticElements.land.tree && <div className="tree"></div>}
                     </div>
-                )}
+                {/* )} */}
             </div>
             <h2>Feature Highlights</h2>
             {featuresData.map((feature, index) => (

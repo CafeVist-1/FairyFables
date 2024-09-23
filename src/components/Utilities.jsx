@@ -116,13 +116,13 @@ export const pricingTiers = [
 
 export const comparisonTable = [
     {
-        feature: 'Stories per Month',
+        feature: 'Stories/Month',
         freeTier: '3',
         premiumMonthly: 'Unlimited',
         premiumYearly: 'Unlimited'
     },
     {
-        feature: 'Customization Options',
+        feature: 'Customization',
         freeTier: 'Basic',
         premiumMonthly: 'Advanced',
         premiumYearly: 'Advanced'

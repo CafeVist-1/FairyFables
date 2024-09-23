@@ -3,10 +3,13 @@ import video from '../assets/images/videob.mp4';
 import download from '../assets/images/download.png';
 import "../assets/styles/HeroSection.css";
 import Popup from './Popup.jsx';
+import Notification from './Notification';
 
 export default function HeroSection() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [popupOpen, setPopupOpen] = useState(false);
+    const [notification, setNotification] = useState('');
+    const [isVisible, setIsVisible] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -28,6 +31,21 @@ export default function HeroSection() {
 
     const closePopup = () => {
         setPopupOpen(false);
+    };
+
+    const handlePopupClose = (message) => {
+        closePopup();
+        setTimeout(() => {
+            if (message) {
+                setNotification(message);
+                setIsVisible(true);
+            }
+        }, 500); 
+    };
+
+    const clearNotification = () => {
+        setNotification('');
+        setIsVisible(false);
     };
 
     return (
@@ -57,13 +75,22 @@ export default function HeroSection() {
                 <p>
                     Help your child unwind with personalized bedtime stories, crafted by AI to inspire sweet dreams.
                 </p>
-                <button onClick={handleButtonClick}><img src={download} alt="download png" />Download FairyFables</button>
+                <button onClick={handleButtonClick}>
+                    <img src={download} alt="download png" />Download FairyFables
+                </button>
             </div>
 
             <Popup
                 popupOpen={popupOpen}
-                closePopup={closePopup}
+                closePopup={handlePopupClose} 
             />
+
+            {isVisible && (
+                <Notification 
+                    message={notification} 
+                    onClose={clearNotification} 
+                />
+            )}
         </div>
     );
 }
